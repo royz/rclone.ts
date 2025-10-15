@@ -2,13 +2,41 @@
   "name": "rclone.ts",
   "version": "1.0.0",
   "description": "A typescript library to interact with rclone",
+  "author": "Rajorshi Roy <rajorshi.me@gmail.com>",
   "main": "./dist/index.js",
-  "scripts": {
-    "build": "tsup"
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "keywords": [],
-  "author": "",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "rclone",
+    "typescript",
+    "cli",
+    "cloud-storage",
+    "sync",
+    "backup"
+  ],
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/royz/rclone.ts.git"
+  },
+  "homepage": "https://github.com/royz/rclone.ts#readme",
+  "bugs": {
+    "url": "https://github.com/royz/rclone.ts/issues"
+  },
   "packageManager": "pnpm@10.12.2",
   "devDependencies": {
     "@types/node": "^24.7.2",
